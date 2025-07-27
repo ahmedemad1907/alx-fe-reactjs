@@ -1,6 +1,7 @@
+// src/components/recipeStore.js
 import { create } from 'zustand';
 
-const useRecipeStore = create((set) => ({
+export const useRecipeStore = create((set) => ({
   recipes: [],
   addRecipe: (recipe) =>
     set((state) => ({
@@ -8,5 +9,3 @@ const useRecipeStore = create((set) => ({
     })),
   setRecipes: (recipes) => set({ recipes }),
 }));
-
-export default useRecipeStore;
